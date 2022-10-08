@@ -38,7 +38,7 @@ public class SacolaDTO implements Serializable {
 	private Boolean fechada;
 	
 	private FormaPagamento formaPagamento;
-	
+ 	
 }
 
 
