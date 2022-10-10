@@ -4,7 +4,7 @@ import com.snayder.sacolaapi.services.exceptions.SacolaApiException;
 
 public enum FormaPagamento {
 	
-	DINHEIRO(0), PIX(2), MAQUINA(1);
+	DINHEIRO(0), PIX(1), MAQUINA(2);
 	
 	private int valor;
 	
