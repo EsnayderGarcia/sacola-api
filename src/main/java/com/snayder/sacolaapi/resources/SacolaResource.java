@@ -45,7 +45,7 @@ public class SacolaResource {
 	}
 	 
 	@PatchMapping("/{sacolaId}")
-	@ApiOperation(value = "Fechar sacola", notes = "Informe 0 para pagamento em dinheiro ou 1 para pagamento via máquina")
+	@ApiOperation(value = "Fechar sacola", notes = "Informe 0 para pagamento em dinheiro, 1 para pagamento via máquina ou 2 para pagamento via pix.")
 	public ResponseEntity<SacolaDTO> fecharSacola(
 			@PathVariable @ApiParam(value = "Id da Sacola", example = "1") Long sacolaId, 
 			@RequestParam  @ApiParam(value = "Forma de Pagamento", example = "1") int formaPagamento) {

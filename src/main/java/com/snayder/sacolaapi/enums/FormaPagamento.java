@@ -1,5 +1,34 @@
 package com.snayder.sacolaapi.enums;
 
+import com.snayder.sacolaapi.services.exceptions.SacolaApiException;
+
 public enum FormaPagamento {
-	DINHEIRO, MAQUINA
+	
+	DINHEIRO(0), PIX(2), MAQUINA(1);
+	
+	private int valor;
+	
+	private FormaPagamento(int valor) {
+		this.valor = valor;
+	}
+	
+	private int getValor() {
+		return valor;
+	}
+	
+	public static FormaPagamento valueOf(int valor) {
+		for (FormaPagamento value : FormaPagamento.values()) {
+			if(value.getValor() == valor) return value;
+		}
+		
+		throw new SacolaApiException("Forma de Pagamento Inválida!");
+	}
+	
 }
+
+
+
+
+
+
+

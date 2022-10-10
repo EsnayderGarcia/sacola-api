@@ -71,8 +71,7 @@ public class SacolaService {
 		if (sacola.getItensSacola().isEmpty())
 			throw new SacolaApiException("Adicione itens a sacola para fechá-la.");
 
-		FormaPagamento pagamento = formaPagamento == 0 ? FormaPagamento.DINHEIRO 
-				: FormaPagamento.MAQUINA;
+		var pagamento = FormaPagamento.valueOf(formaPagamento);
 
 		sacola.setFormaPagamento(pagamento);
 		sacola.setFechada(true);
